@@ -1,0 +1,131 @@
+/* Home Section */
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.5s ease;
+    gap: 50px; /* space between text and image/carousel */
+}
+
+/* Left Side - Text */
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.home-content .highlight {
+    color: #ff6b6b;
+}
+
+.home-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.home-content p {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* keep responsive on small screens */
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: #ff6b6b;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: #ff4b4b;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #ff6b6b;
+    color: #ff6b6b;
+}
+
+.btn-outline:hover {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+/* Right Side - Image / Carousel */
+.home-image {
+    width: 380px;
+    height: 580px;
+    position: relative;
+}
+
+.home-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.home-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Carousel dots style (if using react-slick) */
+.slick-dots {
+    bottom: -25px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #ff6b6b;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ff4b4b;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 60px 5%;
+    }
+
+    .home-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .home-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .home-buttons {
+        justify-content: center;
+    }
+}

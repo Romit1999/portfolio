@@ -1,0 +1,93 @@
+/* About Section */
+.about {
+    padding: 80px 10%;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.5s ease;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #ff6b6b;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Left side - text */
+.about-text {
+    max-width: 600px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-text .highlight {
+    color: #ff6b6b;
+    font-weight: 600;
+}
+
+/* Skills */
+.about-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.about-skills span {
+    background: #ff6b6b;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+/* Right side - image */
+.about-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
